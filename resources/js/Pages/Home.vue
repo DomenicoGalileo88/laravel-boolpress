@@ -1,15 +1,15 @@
 <template>
-  <div>
-    <router-view></router-view>
+  <div class="page_home">
+    <h1>Homepage</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "App",
-};
+    name: 'Home'
+}
 </script>
 
-<style lang="scss">
+<style>
 
 </style>
