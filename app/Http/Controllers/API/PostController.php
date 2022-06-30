@@ -10,8 +10,15 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::with('category', 'tags', 'user')->orderByDesc('id')->paginate(6);
+        $posts = Post::with(['category', 'tags', 'user'])->orderByDesc('id')->paginate(6);
 
         return $posts;
+    }
+
+    public function show()
+    {
+        $post = Post::with(['category', 'tags', 'user'])->where('slug')->first();
+
+        return $post;
     }
 }

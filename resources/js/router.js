@@ -9,6 +9,7 @@ Vue.use(VueRouter);
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Posts from "./Pages/Posts";
+import Posts from "./Pages/Post";
 
 // 2. Define some routes
 // Each route should map to a component. The "component" can
@@ -18,15 +19,23 @@ import Posts from "./Pages/Posts";
 const routes = [
     {
         path: "/",
+        name: "home",
         component: Home,
     },
     {
         path: "/about",
+        name: "about",
         component: About,
     },
     {
         path: "/posts",
+        name: "posts",
         component: Posts,
+    },
+    {
+        path: "/posts/:slug", // o id (in questo caso nella rotta di web.php abbiamo usato lo slug)
+        name: "post",
+        component: Post,
     },
 ];
 
