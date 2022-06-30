@@ -3,7 +3,7 @@
     <SiteJumbotron />
 
     <div class="container-fluid">
-      <div class="row">
+      <div class="row my-5">
         <main class="col-12 col-md-9 col-lg-10">
           <section class="posts">
             <div class="container">
@@ -18,7 +18,7 @@
                     <div class="card-body">
                       <h3>{{ post.title }}</h3>
                       <p>{{trimText(post.content)}}</p>
-                      <router-link :to="{name:'post', params:{slug:post.slug}}">Read more</router-link>
+                      <router-link :to="{ name:'post', params:{ slug:post.slug } }">Read more</router-link>
                     </div>
                     <div class="card-footer">
                       <div class="row">

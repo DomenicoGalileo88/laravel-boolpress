@@ -18,7 +18,7 @@
                 <p>
                   {{post.content.slice(0, 100) + '...'}}
                 </p>
-                <a href="#">Read more</a>
+                <router-link :to="{name: 'post', params: {slug: post.slug} }">Read more</router-link>
               </div>
             </div>
           </div>
