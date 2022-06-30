@@ -18,7 +18,7 @@
                     <div class="card-body">
                       <h3>{{ post.title }}</h3>
                       <p>{{trimText(post.content)}}</p>
-                      <router-link :to="{name:'post', params:{ slug:post.slug}}">Read more</router-link>
+                      <router-link :to="{name:'post', params:{slug:post.slug}}">Read more</router-link>
                     </div>
                     <div class="card-footer">
                       <div class="row">

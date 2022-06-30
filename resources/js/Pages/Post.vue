@@ -1,6 +1,6 @@
 <template>
   <div class="page_post">
-    <h1>{{$route.paraams.slug}}</h1>
+    <h1>{{$route.params.slug}}</h1>
   </div>
 </template>
 

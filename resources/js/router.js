@@ -9,7 +9,7 @@ Vue.use(VueRouter);
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Posts from "./Pages/Posts";
-import Posts from "./Pages/Post";
+import Post from "./Pages/Post";
 
 // 2. Define some routes
 // Each route should map to a component. The "component" can
