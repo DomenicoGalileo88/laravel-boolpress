@@ -42700,14 +42700,16 @@ var render = function () {
                 }),
                 _vm._v(" "),
                 _c("div", { staticClass: "metadata ms-4" }, [
-                  _c("div", { staticClass: "category" }, [
-                    _c("h5", [_vm._v("Category:")]),
-                    _vm._v(
-                      "\n              " +
-                        _vm._s(_vm.post.category.name) +
-                        "\n            "
-                    ),
-                  ]),
+                  _vm.post.category
+                    ? _c("div", { staticClass: "category" }, [
+                        _c("h5", [_vm._v("Category:")]),
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.post.category.name) +
+                            "\n            "
+                        ),
+                      ])
+                    : _vm._e(),
                   _vm._v(" "),
                   _c("div", { staticClass: "author" }, [
                     _c("h5", [_vm._v("Author:")]),
@@ -42718,23 +42720,25 @@ var render = function () {
                     ),
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "post_tags" }, [
-                    _c("h5", [_vm._v("Tags:")]),
-                    _vm._v(" "),
-                    _c(
-                      "ul",
-                      _vm._l(_vm.post.tags, function (tag) {
-                        return _c("li", { key: tag.id }, [
-                          _vm._v(
-                            "\n                  #" +
-                              _vm._s(tag.name) +
-                              "\n                "
-                          ),
-                        ])
-                      }),
-                      0
-                    ),
-                  ]),
+                  _vm.post.tags.length > 0
+                    ? _c("div", { staticClass: "post_tags" }, [
+                        _c("h5", [_vm._v("Tags:")]),
+                        _vm._v(" "),
+                        _c(
+                          "ul",
+                          _vm._l(_vm.post.tags, function (tag) {
+                            return _c("li", { key: tag.id }, [
+                              _vm._v(
+                                "\n                  #" +
+                                  _vm._s(tag.name) +
+                                  "\n                "
+                              ),
+                            ])
+                          }),
+                          0
+                        ),
+                      ])
+                    : _vm._e(),
                 ]),
               ]),
               _vm._v(" "),

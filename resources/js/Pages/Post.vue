@@ -13,7 +13,7 @@
             />
 
             <div class="metadata ms-4">
-              <div class="category">
+              <div class="category" v-if="post.category">
                 <h5>Category:</h5>
                 {{ post.category.name }}
               </div>
@@ -23,7 +23,7 @@
                 {{ post.user.name }}
               </div>
 
-              <div class="post_tags">
+              <div class="post_tags" v-if="post.tags.length > 0">
                 <h5>Tags:</h5>
                 <ul>
                   <li v-for="tag in post.tags" :key="tag.id">
