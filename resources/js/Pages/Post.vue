@@ -61,8 +61,14 @@ export default {
     Axios.get("/api/posts/" + this.$route.params.slug)
       .then((response) => {
         console.log(response.data);
-        this.post = response.data;
-        this.loading = false;
+        // per vedere la pagina 404 nin caso di errore
+        if (response.data.status_code == 404) {
+          // 
+          this.$router.push({name: 'not-found'});
+        } else {
+          this.post = response.data;
+          this.loading = false;
+        }
       })
       .catch((e) => {
         console.error(e);
