@@ -61,7 +61,7 @@
           ></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary text-white">
+        <button type="submit" class="btn btn-dark text-white">
           Send Message
         </button>
       </vue-form>

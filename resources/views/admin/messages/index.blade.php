@@ -15,7 +15,6 @@
                         <th>Full_name</th>
                         <th>Email</th>
                         <th>Subject</th>
-                        <th>Message</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -26,7 +25,6 @@
                         <td>{{$message->full_name}}</td>
                         <td>{{$message->email}}</td>
                         <td>{{$message->subject}}</td>
-                        <td>{{$message->message}}</td>
                         <td>
                             <a class="btn btn-primary text-white mb-2" href="{{route('admin.messages.show', $message->id)}}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
@@ -60,3 +58,4 @@
 </div>
 
 @endsection
+

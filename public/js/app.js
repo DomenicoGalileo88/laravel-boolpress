@@ -5742,22 +5742,34 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "App",
   data: function data() {
     return {
       menu_items: [{
         route_id: 1,
-        route_name: 'home',
-        route_text: 'Home'
+        route_name: "home",
+        route_text: "Home"
       }, {
         route_id: 2,
-        route_name: 'about',
-        route_text: 'About'
+        route_name: "about",
+        route_text: "About"
       }, {
         route_id: 3,
-        route_name: 'posts',
-        route_text: 'Posts'
+        route_name: "posts",
+        route_text: "Posts"
+      }, {
+        route_id: 4,
+        route_name: "contacts",
+        route_text: "Contacts"
       }]
     };
   }
@@ -42866,7 +42878,7 @@ var render = function () {
           _c(
             "button",
             {
-              staticClass: "btn btn-primary text-white",
+              staticClass: "btn btn-dark text-white",
               attrs: { type: "submit" },
             },
             [_vm._v("\n        Send Message\n      ")]
@@ -43585,7 +43597,7 @@ var render = function () {
                   staticClass: "navbar-brand",
                   attrs: { to: { name: "home" } },
                 },
-                [_vm._v("\n              Boolpress\n          ")]
+                [_vm._v("\n        Boolpress\n      ")]
               ),
               _vm._v(" "),
               _vm._m(0),
@@ -43619,8 +43631,6 @@ var render = function () {
                     }),
                     0
                   ),
-                  _vm._v(" "),
-                  _c("ul", { staticClass: "navbar-nav ms-auto" }),
                 ]
               ),
             ],
