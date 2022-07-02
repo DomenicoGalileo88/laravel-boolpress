@@ -1,12 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Message;
+use Illuminate\Support\Facades\Mail;
 use App\Mail\AdminContactMessage;
 use App\Mail\ContactMessageConfirmation;
-use App\Models\Message;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 
 class MessageController extends Controller
 {
