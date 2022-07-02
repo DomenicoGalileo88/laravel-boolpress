@@ -3,7 +3,9 @@
 use App\Mail\PostUpdate;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 use App\Models\Post;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +21,22 @@ use App\Models\Post;
     return view('welcome');
 });
  */
+
+Route::get('contact-form', 'MessageController@index')->name('contact-form.index');
+Route::post('contact-form', 'MessageController@store');
+
+// controller per gestire la richiesta ()
+
+// un modello per  il messaggio ricevuto
+
+// tabella messages
+
+// mailable per admin
+
+// mailable per utente
+
+// limitare accesso a pannello messaggi solo al primo utente (il nostro supe admin)
+
 Auth::routes();
 
 Route::middleware('auth')->prefix('admin')->namespace('Admin')->name('admin.')->group(function (){
@@ -36,6 +54,8 @@ Route::middleware('auth')->prefix('admin')->namespace('Admin')->name('admin.')->
     Route::resource('tags', 'TagController')->parameters([
         'tags' => 'tag:slug'
     ])->except('show', 'edit', 'create');
+
+    Route::resource('messages', 'Admin\MessageController');
 });
 
 
